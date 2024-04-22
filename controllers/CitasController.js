@@ -66,7 +66,7 @@ export const modificarCita = async (req, res)=>{
 
 export const eliminarCita = async(req, res)=>{
     try {
-        let citas = Citas.findAll({where:{id:req.params.id} });
+        let citas = await Citas.findAll({where:{id:req.params.id} });
         if(!citas[0]){
             res.json({msg:"no se encuentra la cita"});
         }else{

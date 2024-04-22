@@ -7,11 +7,14 @@ import BD from '../config/db.js';
 
 // Importamos el archivo de rutas
 import citasRoutes from '../routes/Routes_Citas.js'
+import empleadosRoutes from '../routes/Routes_Empleados.js'
+
 // definimos la variable app para trabajar con express
 const app = express();
 app.use(cors());  
 app.use(express.json());
 app.use('/citas',citasRoutes)
+app.use('/empleados',empleadosRoutes)
 
 
 // autenticacion BD
